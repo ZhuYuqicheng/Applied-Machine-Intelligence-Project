@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  SpotWebApp:
+    image: spot-predictor
+    container_name: spot
+    build:
+      context: ./web
+    volumes:
+      - ./web:/web
+    ports:
+      - 8888:8888

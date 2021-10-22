@@ -1,0 +1,589 @@
+{% load static %}
+<!doctype html>
+<!--
+	Lamoda by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en-gb" class="no-js">
+  <head>
+
+    <meta charset="utf-8">
+	<title> AMI (G09) | Spotprice predictor</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Bootstrap CSS -->
+{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"#}
+{#    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">#}
+    <!--Chartjs CDN-->
+{#    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>#}
+
+
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      
+
+     <!--styles -->
+    <link href="{% static 'newapp/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'newapp/css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'newapp/js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'newapp/js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'newapp/js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'newapp/css/magnific-popup.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'newapp/css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'newapp/css/etlinefont.css' %}">
+    <link href="{% static 'newapp/css/style.css' %}" type="text/css"  rel="stylesheet"/>
+{#    <link href="{% static 'newapp/css/all.css' %}"  rel="stylesheet"/>#}
+
+
+   <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="{% static 'newapp/js/html5shiv.js' %}"></script>
+        <script src="{% static 'newapp/js/respond.min.js' %}"></script>
+{#        <script src="{% static 'newapp/js/stock.js' %}"></script>#}
+        <![endif]-->
+    
+	<body  data-spy="scroll" data-target="#main-menu" >
+
+
+  <!--Start Page loader -->
+  <div id="pageloader">
+        <div class="loader">
+          <img src="{% static 'newapp/images/progress.gif' %}" alt='loader' />
+        </div>
+  </div>
+   <!--End Page loader -->
+   
+      
+<!--Start Navigation-->
+		<header id="header">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="fa fa-bars"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                            <!--Start Logo -->
+							<div class="logo-nav">
+								<a href="/">
+									&emsp;&emsp;&emsp;&emsp;
+                                    <img src="{% static 'newapp/images/tum_logo (2).png' %}" alt="" />
+								</a>
+							</div>
+                            <!--End Logo -->
+							<div class="clear-toggle"></div>
+							<div id="main-menu" class="collapse scroll navbar-right">
+								<ul class="nav">
+
+									<li class="active"> <a href="#home">Home</a> </li>
+									<li > <a href="#about">About</a> </li>
+                                    <li > <a href="#workflow">workflow</a> </li>
+								    <li > <a href="#models">Our Models</a> </li>
+									<li > <a href="#video">Video</a> </li>
+                                    <li > <a></a> </li>
+                                    <li > <a></a> </li>
+
+								</ul>
+							</div><!-- end main-menu -->
+						</div>
+					</div>
+				</div>
+		</header>
+    <!--End Navigation-->
+
+      
+        <!-- Start Slider  -->
+        <section id="home" class="home">
+            <div class="slider-overlay"></div>
+            <div class="flexslider">
+                <ul class="slides scroll">
+                    <li class="first">
+                        <div class="slider-text-wrapper">  
+                            <div class="container-fluid ">
+                                <div class="big">Are you ready to predict the Spotprice?</div>
+                                <a href="#models" class="middle btn btn-white">Get started</a>
+                            </div>       
+                        </div>
+                        <img src="{% static 'newapp/images/slider/img.png' %}" alt="">
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+          <!-- End Slider  -->
+
+
+  <!--Start Features-->
+  <section  id="about" class="section">
+       <div class="container-fluid">
+
+       </div> <!-- /.container-->
+  </section>
+  <!--End Features-->
+
+ 
+  <!-- Start Facts-->
+  <section id="facts" class="section parallax">
+    <div class="overlay"></div>
+       <div class="container-fluid">
+           <div class="row">
+               <div class="title-box text-center white">
+                    <h2 class="title">team</h2>
+                 </div>
+                <!-- Start Item-->
+                <div class="col-md-3 col-sm-6 facts-box margin-bottom-1">
+                    <span><i class="icon-happy"></i></span>
+
+                    <h10>JUNPENG CHEN</h10>
+                </div>
+                <!-- End Item-->
+ 
+                 <!-- Start Item-->
+                <div class="col-md-3 col-sm-6 facts-box margin-bottom-1">
+                 <span><i class="icon-happy"></i></span>
+                    <h10>HAN LIANG</h10>
+                </div>
+                <!-- End Item-->
+
+                 <!-- Start Item-->
+                <div class="col-md-3 col-sm-6 facts-box margin-bottom-1">
+                 <span><i class="icon-happy"></i></span>
+                    <h10>YICONG LI</h10>
+                </div>
+                <!-- End Item-->
+
+                 <!-- Start Item-->
+                <div class="col-md-3 col-sm-6 facts-box margin-bottom-1">
+                 <span><i class="icon-happy"></i></span>
+                    <h10>JIAXIN YANG</h10>
+                </div>
+
+                <!-- End Item-->
+           </div> <!-- /.row -->
+       </div> <!-- /.container -->
+
+       <div class="container-fluid">
+           <div class="row">
+               <div class="col-md-6 col-sm-6 facts-box margin-bottom-1">
+                 <span><i class="icon-happy"></i></span>
+                    <h10>RUNYAO YU</h10>
+                </div>
+
+               <div class="col-md-6 col-sm-6 facts-box margin-bottom-1">
+                 <span><i class="icon-happy"></i></span>
+                    <h10>XUYANG ZHONG</h10>
+                </div>
+
+               <div class="col-md-12 col-sm-6 facts-box margin-bottom-1">
+                 <span><i class="icon-happy"></i></span>
+                    <h10>YUQICHENG ZHU</h10>
+                </div>
+           </div>
+       </div>
+
+  </section>
+  <!--End Facts-->
+
+  
+  <!--Start Section-->
+ <section class="section">
+      <div class="container-fluid">
+          <div class="row"> 
+                <div class="col-md-12">
+					<div class="content-tab-1">
+						<ul class="nav">
+							<li class="active">
+								<a aria-expanded="true" href="#tab-content-1" data-toggle="tab">
+								<i class="fa fa-cloud-download"></i>
+								<h4>FEATURE COLLECTION</h4>
+								</a>
+								<div class="tab-arrow">
+								</div>
+							</li>
+                            
+
+							  <li>
+								<a aria-expanded="true" href="#tab-content-5" data-toggle="tab">
+								<i class="fa fa-check-square"></i>
+								<h4>Feature extraction</h4>
+								</a>
+								<div class="tab-arrow">
+								</div>
+							</li>
+                            
+						</ul>
+                        
+						<div class="tab-content-main">
+								<div class="container-fluid">
+									<div class="tab-content">
+										<div class="tab-pane active in" id="tab-content-1">
+											
+                                           <!-- Features Icon-->	
+                                            <div class="col-md-6 margin-bottom-30">
+                                                <div class="tab1-features">
+                                                    <div class="icon"> <i class="fa fa-cloud"></i> </div>
+                                                    <div class="info">
+                                                        <h4>Weather</h4>
+                                                        <P>    We observed that photovoltaics account for a large proportion of total generation.
+                                                                Weather, especially radiation, has an influence on the generation of photovoltaics.
+                                                                Hence, introducing weather-related features, such as air temperature at 200cm high and 20cm high,
+                                                                temperature at 5cm and 20cm away from the ground, humidity, wind speed and rainfall, into our research is necessary.
+                                                                It should be noted that the weather
+                                                                features are collected from Leipzig. </P>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="tab1-features">
+                                                    <div class="icon"> <i class="fa fa-line-chart"></i> </div>
+                                                    <div class="info">
+                                                        <h4>History spot price</h4>
+                                                        <p> History spot price in Leipzig is the most correlated feature to predict the future spot price,
+                                                            which can be obtained from Montel API through corresponding token and correct indexing. </p>
+                                                    </div>
+                                                </div>
+                                              
+                                                <div class="tab1-features">
+                                                    <div class="icon"> <i class="fa fa-flash (alias)"></i></div>
+                                                    <div class="info">
+                                                        <h4>Electricity consumption</h4>
+                                                        <p> we collect the data of total power and residual power consumption for electricity consumption, electricity power generated by wind onshore,
+                                                            fossil brown and hard coal, hydro pumped storage and photovoltaics, from the website smard.de.</p>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <!--End features Icon-->
+                                            
+                                           
+                                          <!--  Start Carousel-->
+                                          <div class="col-md-6">
+                                              <div class="tab-carousel">
+                                                    <div class="item"><img src="{% static 'newapp/images/works/14.png' %}" alt=""></div>
+                                              </div>
+                                          </div>
+                                          <!-- End Carousel-->                                            
+                                            
+										</div>
+                                       <!-- End Tab content 1-->
+
+										<div class="tab-pane" id="tab-content-5">
+										    
+                                            <div class="tab-content-5">
+                                                
+                                                <div class="col-md-6">
+                                                     <div class="core-features">
+                                                       
+                                                         <p> To improve the predictive accuracy of ARIMA model, we also need to do feature engineering which includes the feature extraction,
+                                                             feature selection and interpretation. For feature extraction we use a scrolling window with a size of 24 to divide the spot price into many short sequences firstly,
+                                                             then we used the Python package "tsfresh" to extract 786 features in each window. After that, we select the features in two stages, respectively.
+                                                             In the first stage, we used Kendall rank correlation coefficients with a significance level of 0.05 to filter out uncorrelated variables.
+                                                             After this, we continued to use Lasso regression, keeping only the features with non-zero coefficients. At last, we just used the top 17 features.</p>
+
+                                                         
+                                               </div>
+                                                </div>
+                                                
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="devices-image">
+                                                        <img src="{% static 'newapp/images/works/used_features.png' %}" alt=""/>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            
+										</div>
+                                        
+									</div>
+								</div>
+						  </div>
+                        <!--/.tab-content-main-->  
+					</div>
+				</div>
+              
+            </div> <!--/.row-->  
+      </div> <!--/.container-->
+  </section>
+  <!--End Section-->
+  
+   
+     <!--Start Workflow-->
+    <section id="workflow" class="section parallax">
+		<div class="overlay"></div>
+            <div class="container-fluid">
+                 <div class="title-box text-center white">
+                    <h2 class="title">Workflow</h2>
+                 </div>
+                 
+                     <!-- Workflow Timeline -->
+                    <ul class="timeline list-unstyled">
+                        
+                        <li class="year">2021</li>
+                        
+                        <!--Workflow Item -->
+                        <li class="timeline-item">
+                            <h4>Feature collection</h4>
+                            <p>Through literature review and group discussion, we initially summarized the features that may influence electricity prices and collected those features
+                               from the corresponding sources, such as Montel API, smard.de and so on.</p>
+                            <span> 20 APR 2021</span>
+                        </li>
+                        <!-- End Item -->
+                        
+                        <!--Workflow Item -->
+                        <li class="timeline-item">
+                            <h4>Data preprocessing</h4>
+                            <p>There are a lot of works in the data preprocessing.  We merge these data collected from different sources into one file and downsample or upsample them in hours.
+                                We also need to deal with missing values by using the way such as auto-regression model in the spot electricity price dataset. For ARIMA model,
+                                we used scrolling window technique and tsfresh module in python to extract the features. Besides that, we selected features by using Kendall
+                                rank correlation coefficients with a significance level of 0.05 and  Lasso regression method.</p>
+                            <span> 8 JUN 2021</span>
+                        </li>
+                        <!-- End Item -->
+                        
+                        <!-- Workflow Year -->
+{#                        <li class="year">2015</li>#}
+                        
+                        
+                        <!--Workflow Item -->
+                        <li class="timeline-item">
+                            <h4>Model training</h4>
+                            <p>There are two training processes involved in the ARIMA model. During the training process for the Lasso regression, we gradually increased the value of alpha and found that the performance of our model is almost the same until the alpha equals 2.
+                                In order to avoid overfitting and shorten the prediction time, we set the value of alpha equals 2 at the end.
+                                The length of training set can also significantly influence the performance of ARIMA model.
+                                We use sMAPE (symmetric mean absolute percentage error) as a performance metric and found that the performance of the ARIMA model
+                                with the training length of 2 months is the best. </p>
+                            <span> 25 JUN 2021</span>
+                        </li>
+                        <!-- End Item -->
+                        
+                        <!--Workflow Item -->
+                        <li class="timeline-item">
+                            <h4>Model evaluation </h4>
+                            <p>To provide statistically robust evaluation of ARIMA model, we used time-based cross validation,
+                                which forms a type of “sliding window” training approach.
+                                This method slides a window over the training samples while using several future samples as a test set.  </p>
+                            <span> 8 AUG 2021</span>
+                        </li>
+                        <!-- End Item -->
+                        
+                         <!--Workflow Item -->
+                        <li class="timeline-item">
+                            <h4>Integration to the Web-Interface</h4>
+                            <p>Three results of predictions using these two models for the price 1 hour ahead, 1 day ahead and 1 week ahead will be shown on this web interface.
+                                Users can click on the prediction buttons for each of the two models to observe the results.</p>
+                            <span> 20 AUG 2021</span>
+                        </li>
+                        <!-- End Item -->
+                        
+                         <li class="clear"></li>
+                        
+                        <li class="end-icon fa fa-bookmark"></li>
+                    </ul>
+                   <!-- End Workflow Timeline -->
+                   
+           </div> <!--/.container-->
+	</section>
+  <!--End Workflow-->
+
+  <!--Start models-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <section id="models" class="section">
+       <div class="container-fluid">
+           <div class="row">
+                 <div class="title-box text-center">
+                 <h2 class="title">Our Models</h2>
+                 </div>
+            <a name="name"></a>
+            <form method="POST" action="/ami/pred#name" >{% csrf_token %}
+                 {{ form.non_field_errors }}
+              <!--start tabs-->
+              <div class="col-md-6">
+                  <div class="tabs tabs-main">
+					<ul class="nav nav-tabs">
+					  <li class="active"><a data-toggle="tab" >ARIMAX</a></li>
+					</ul>
+					<div class="tab-content">
+						<!--Start Tab Item #1 -->
+                                    <div class="help-tip">
+                                        <p>If you want to predict the price of electricity one hour later, the starting time should not exceed the current time. The forecast time is about 10s, please be patient! Please do not re-click during the prediction period.</p>
+                                    </div>
+						<div class="tab-pane in active" id="one">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <input type="date" id="date" name="date_arima"
+                                            {% if data_arima %}
+                                                value = {{ data_arima }}
+                                            {% else %}
+                                                value = {{ date_limit }}
+                                            {% endif %}
+                                            min="2021-03-01" max={{ date_limit }}>
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <input type="time" id="time" name="time_arima"
+                                            {% if time_arima %}
+                                                value={{ time_arima }}
+                                            {% else %}
+                                                value="12:00"
+                                            {% endif %}
+                                            pattern="[0-9]{2}:[0-9]{2}"
+                                            min="00:00" max="24:00">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <select class="form-control" id="range" name="predict_range_arima">
+                                          <option>1 Hour</option>
+                                          <option>1 Day</option>
+                                          <option>1 Week</option>
+                                        </select>
+                                    </div>
+                                <div class="row">
+                                    <input class="btn btn-primary" type="submit" name="arima_pred" value = "predict" >
+                                </div>
+                                </div>
+
+                                            {% block content_arimax %}
+                                            {% endblock content_arimax %}
+
+                        </div>
+                    </div>
+				  </div>
+              </div>
+             <!-- End Tabs-->
+           <!-- Start transformer-->
+             <div class="col-md-6">
+                  <div class="tabs tabs-main">
+					<ul class="nav nav-tabs">
+					  <li class="active"><a href="#one" data-toggle="tab">TRANSFORMER</a></li>
+					</ul>
+					<div class="tab-content">
+						<!--Start Tab Item #1 -->
+                                    <div class="help-tip">
+                                        <p>If you want to predict the price of electricity one hour later, the starting time should not exceed the current time. The forecast time is about 10s, please be patient! Please do not re-click during the prediction period.</p>
+                                    </div>
+
+						<div class="tab-pane in active">
+                                {{ form.non_field_errors }}
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <input type="date" id="date" name="date_trf"
+                                               {% if date_trf %}
+                                                   value = {{ date_trf }}
+                                               {% else %}
+                                                   value = {{ date_limit }}
+                                               {% endif %}
+                                            min="2021-03-01" max={{ date_limit }}>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <input type="time" id="time" name="time_trf"
+                                            {% if time_trf %}
+                                                value={{ time_trf }}
+                                            {% else %}
+                                                value="12:00"
+                                            {% endif %}
+                                            pattern="[0-9]{2}:[0-9]{2}"
+                                            min="00:00" max="24:00">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <select class="form-control" id="range" name="predict_range_trf">
+                                          <option>1 Hour</option>
+                                          <option>1 Day</option>
+                                          <option>1 Week</option>
+                                        </select>
+                                    </div>
+
+                                <div class="row">
+                                    <input class="btn btn-primary" type="submit" value = "predict" name="trf_pred">
+                                </div>
+
+                                </div>
+                                        {% block content_transformer %}
+                                        {% endblock content_transformer %}
+						</div>
+                    </div>
+				  </div>
+             </div> <!--/.col-->
+            </form>
+           </div>   <!--/.row-->
+       </div> <!--/.container-->
+  </section>
+  <!--End Why Choose us-->
+
+ 
+  <!--Start video-->
+  <section id="video" class="section parallax">
+        <div class="overlay"></div>
+       <div class="container-fluid">
+           <div class="row">
+                 <div class="title-box text-center white">
+                    <h2 class="title">Video</h2>
+                 </div>
+             <div class="col-md-6">
+                 <div class="video-caption-main">
+                      <!--Video caption #1-->
+                      <div class="video-caption">
+                          <div class="video-icon">
+                              <i class="fa fa-play-circle-o"></i>
+                          </div>
+                          <div class="video-caption-info">
+                              <h4>Take a look at  this video :D</h4>
+                          </div>
+                      </div>
+                 </div>
+             </div>
+            <!-- End Video caption-->
+
+            <div class="col-md-6">
+                <div class="play-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_SZ6bKFkFyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe> -->
+                </div>
+            </div> 
+               
+           </div> <!-- /.row-->
+       </div> <!-- /.container-->
+  </section>
+  <!--End video-->
+
+    <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+
+    <!--Plugins-->
+	<script type="text/javascript" src="{% static 'newapp/js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/owl-carousel/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/jquery.magnific-popup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/easing.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/jquery.easypiechart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/jquery.parallax-1.1.3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/jquery.mixitup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newapp/js/custom.js' %}"></script>
+
+
+{#    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"#}
+{#    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">#}
+{#    </script>#}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+
+{#    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>#}
+{#    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>#}
+             <script>
+                  $(window).load(function() {
+                    $('#loading').hide();
+                  });
+             </script>
+
+  </body>
+</html>
+

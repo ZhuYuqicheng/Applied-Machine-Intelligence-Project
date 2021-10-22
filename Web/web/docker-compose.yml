@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  SpotWebApp:
+    image: gitlab.ldv.ei.tum.de:5005/ami2021/group09/pred09_arima_trf:latest
+    container_name: spot
+    volumes:
+      - ./web:/web
+    ports:
+      - 8888:8888

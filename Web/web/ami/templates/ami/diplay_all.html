@@ -1,0 +1,208 @@
+{% extends "ami/index.html" %}
+{%load static%}
+
+
+
+{% block content_arimax%}
+
+
+{% if chart_arima %}
+{#<!--    <img src="data:image/png;base64, {{chart_arima|safe}}">-->#}
+    <div>
+        Selected date: {{ data_arima }} {{ time_arima }}
+        <br>
+        Predict range: {{ predict_range_arima }}
+    </div>
+
+    <div>
+        <canvas id="line-chart-arima" width="400" height="250" ></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        var config_arima = {
+            type: 'line',
+            data: {
+                datasets: [{
+                    data: {{ train_data_arima }},
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1,
+                    label: 'observed spot market price'
+                    },
+                    {
+                    data: {{ pred_arima | safe }},
+                    fill: false,
+                    borderColor: 'rgb(75, 75, 192)',
+                    tension: 0.1,
+                    label: 'predicted spot market price'
+                    },
+                    {
+                    data: {{ plot_arima | safe }},
+                    fill: false,
+                    borderColor: 'rgb(255, 213, 0)',
+                    tension: 0.1,
+                    label: ' real spot market price'
+                    }
+
+
+
+                    ],
+                labels: {{ timesteps_arima | safe }}
+                },
+            options: {
+                responsive: true,
+                interaction: {
+                                 mode: 'index',
+                                  intersect: false,
+                              },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'sport market data'
+                    }
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Spot Price [eur/kWh]'
+                        }
+                    }
+                }
+            },
+        };
+
+     window.onload = function() {
+     var ctx_arima = document.getElementById('line-chart-arima').getContext('2d');
+     window.myLine = new Chart(ctx_arima, config_arima);
+
+
+        };
+    </script>
+
+
+{% endif %}
+{% endblock content_arimax %}
+
+
+
+
+
+
+{% block content_transformer %}
+{% if chart_trf %}
+
+<!--    <img src="data:image/png;base64, {{chart_trf|safe}}">-->
+    <div>
+        Selected date: {{ date_trf }} {{ time_trf }}
+        <br>
+        Predict range: {{ predict_range_trf }}
+    </div>
+
+    <div>
+        <canvas id="line-chart" width="400" height="250"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+        var config_tf = {
+            type: 'line',
+            data: {
+                datasets: [{
+                    data: {{ train_data_trf }},
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1,
+                    label: 'observed spot market price'
+                    },
+
+                    {
+                    data: {{ pred_trf | safe }},
+                    fill: false,
+                    borderColor: 'rgb(75, 75, 192)',
+                    tension: 0.1,
+                    label: 'predicted spot market price'
+                    },
+                    {
+                    data: {{ plot_trf | safe }},
+                    fill: false,
+                    borderColor: 'rgb(255, 213, 0)',
+                    tension: 0.1,
+                    label: ' real spot market price'
+                    }
+
+
+
+
+                    ],
+                labels: {{ timesteps_trf | safe }}
+                },
+            options: {
+                responsive: true,
+                interaction: {
+                                 mode: 'index',
+                                  intersect: false,
+                              },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'sport market data'
+                    }
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Spot Price [eur/kWh]'
+                        }
+                    }
+                }
+            },
+        };
+    {% if chart_arima %}
+    window.onload = function() {
+      var ctx_tf = document.getElementById('line-chart').getContext('2d');
+      var ctx_arima = document.getElementById('line-chart-arima').getContext('2d');
+      window.myLine = new Chart(ctx_tf, config_tf);
+      window.myLine = new Chart(ctx_arima, config_arima);
+    };
+    {% else %}
+    window.onload = function() {
+      var ctx_tf = document.getElementById('line-chart').getContext('2d');
+
+      window.myLine = new Chart(ctx_tf, config_tf);
+
+    };
+    {%endif%}
+    </script>
+{%else%}
+
+<!--    <img src="{% static 'img/about-video.jpg'%}" class="img-fluid" alt="" width="400" height="300"><br>-->
+{% endif %}
+
+
+
+{% endblock content_transformer %}
