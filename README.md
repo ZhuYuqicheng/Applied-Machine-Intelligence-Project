@@ -1,6 +1,6 @@
 # TUM AMI Project: Electricity Price Forecasting
 
-A practical Machine Learning lecture held by Professor **Klaus Diepold** at Technical University Munich (TUM). This lecture consists of reading assignment, essay writing, discussion session and final project. This repository contains codes, jupyter notebooks, report, etc. for the final project - "Forecasting for Leipzig's Electricity Price".
+A practical Machine Learning lecture held by Professor **Klaus Diepold** at Technical University Munich (TUM). This lecture consists of reading assignment, essay writing, discussion session and final project. This repository contains codes, jupyter notebooks, report, etc. for the final project - "*Electricity Price Forecasting*".
 
 > The spot price data obtained from MONTAL has been removed according to the regulation.
 
@@ -15,6 +15,12 @@ A practical Machine Learning lecture held by Professor **Klaus Diepold** at Tech
 - **Yicong Li** (Responsible for: Report)
 
 > Concrete contributions see: [Declaration of Contributions](./Report/Declaration_of_Contributions.md)
+
+---
+
+## Introduction
+
+This project aims to compare the performance of traditional machine learning and deep learning in predicting electricity prices. We selected **ARIMA** and **Transformer** as the representor for traditional training and deep learning respectively. They were compared in terms of accuracy, stability, efficiency and interpretability, etc. All processes and corresponding findings and results were documented in jupyter notebooks. A summary of this project can be found in report.
 
 ## Content List
 
