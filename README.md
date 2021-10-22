@@ -22,6 +22,10 @@ A practical Machine Learning lecture held by Professor **Klaus Diepold** at Tech
 
 This project aims to compare the performance of traditional machine learning and deep learning in predicting electricity prices. We selected **ARIMA** and **Transformer** as the representor for traditional training and deep learning respectively. They were compared in terms of accuracy, stability, efficiency and interpretability, etc. All processes and corresponding findings and results were documented in jupyter notebooks. A summary of this project can be found in report.
 
+## Poster
+
+![Video Preview](./Report/poster.png)
+
 ## Content List
 
 - [Website Guideline](./Web/web/guide.md)
