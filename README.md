@@ -55,6 +55,8 @@ All processing, tests and experiments of ARIMA were carried out in Jyupter Noteb
 
 ## Transformer
 
+> The Code is mainly based on this repository: https://github.com/nklingen/Transformer-Time-Series-Forecasting
+
 For more information about transformer implementation, check out [this documentation](./Transformer/README.md).
 
 - Requirements
